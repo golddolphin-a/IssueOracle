@@ -1,0 +1,40 @@
+# [카테고리] 이슈 제목
+
+## 메타데이터
+- ID: ISS-001
+- 날짜: YYYY-MM-DD
+- Architecture: ARM Cortex-M4 / RISC-V / TriCore
+- 제품: S32K144 / SiFive / TC3xx
+- 빈도: 높음 / 중간 / 낮음
+- 태그: #flash #timeout #watchdog
+
+## 증상
+- 고객이 보고한 현상
+- 에러 메시지 / 로그
+- 재현 조건
+
+## 원인
+- 근본 원인 (CVD 관점)
+- 타겟 HW/SW 관점
+
+## 해결
+1. 단계별 해결 방법
+2. 검증 방법
+3. 추가 체크 사항
+
+## 💡 학습한 Knowledge
+### [관련 기술 1]
+- 핵심 동작 원리
+- CVD 내부 동작
+
+### [관련 기술 2]
+- Architecture별 차이점
+- 주의사항
+
+## 관련 이슈
+- ISS-002: [제목]
+- ISS-015: [제목]
+
+## 참고 자료
+- CVD 매뉴얼 X.X절
+- Datasheet 링크
