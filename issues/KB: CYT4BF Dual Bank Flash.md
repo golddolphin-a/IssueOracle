@@ -1,5 +1,5 @@
 ---
-ID: SS-001
+ID: KB-000
 date: 2026-02-03
 status: solved  # or pending
 category: flash 
