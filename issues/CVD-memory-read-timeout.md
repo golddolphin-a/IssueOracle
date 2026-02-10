@@ -1,11 +1,12 @@
 ---
 ID: ISS-002
 date: 2026-02-03
-status: solved
+status: solved # or pending
 category: CVD function
 Architecture: all
 priority: medium
 tags: [memory read, timeout, slow clock, data dump]
+flags: user-issue # or self-study
 ---
 
 ### Memory Read Timeout with Slow Target Clock
