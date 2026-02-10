@@ -5,7 +5,7 @@ status: solved  # 또는 pending
 category: CVD function
 Architecture: all
 priority: medium  # high/medium/low
-tags: #CVD #variable format #CVD config
+tags: `#CVD` `#variable format` `#CVD config`
 
 ---
 
