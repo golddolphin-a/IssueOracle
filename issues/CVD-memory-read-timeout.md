@@ -14,6 +14,40 @@ tags: [memory read, timeout, slow clock, data dump]
 CVD 디버거에서 low JTAG clock인 경우 memory read 시간이 길어져 response timeout으로 인해 CVD가 연결을 끊어버리는 문제. 필요한 영역만 dump하거나 timeout/segment size 조절로 해결.
 
 ---
+#### **문제/증상**  
+
+**발생 조건:**
+- Target clock: 0.05 이하 (매우 느린 클럭)
+- Debug mode 진입: 정상
+- Memory read 시도: Timeout 발생
+
+**에러 메시지 예시:**
+```
+Error - Memory read failed from 0x[ADDRESS] - unknown error (0x00000002)
+```
+```
+Fail, Target does not system down !
+```
+
+## 🔍 에러 메시지별 이해
+
+### "Memory read failed - unknown error (0x00000002)"
+- 일반적인 timeout 에러
+- 1차/2차 해결책 적용
+
+### "Fail, Target does not system down!"
+**의미:**
+- Memory read가 timeout으로 먼저 실패
+- CVD가 cleanup을 위해 debug mode 종료(sysdown) 시도
+- 하지만 target이 이미 정상 상태이거나 state 불일치
+- Sysdown 명령 실패로 인한 2차 에러 메시지
+
+**대응:**
+- 이 메시지는 근본 원인이 아닌 **결과**
+- 실제 원인: Memory read timeout
+- **동일하게 1차/2차 해결책 적용**
+
+---
 
 ## ⚡ 즉시 시도할 해결책
 
@@ -128,27 +162,6 @@ Target clock 0.05 이하 & Memory read timeout 발생
             ├─ 성공 → 문제 해결 ✅
             └─ 지속 실패 → 에스컬레이션 📧
 ```
-
----
-
-## 📋 환경 조건
-
-**발생 조건:**
-- Target clock: 0.05 이하 (매우 느린 클럭)
-- Debug mode 진입: 정상
-- Memory read 시도: Timeout 발생
-
-**에러 메시지 예시:**
-```
-Error - Memory read failed from 0x[ADDRESS] - unknown error (0x00000002)
-```
-
-**확인 필요 정보:**
-- CVD 버전
-- Firmware 버전
-- Target mode (sysup / attach / prepare)
-- 현재 Response Timeout 값
-- 현재 Memory Segment Size 값
 
 ---
 
