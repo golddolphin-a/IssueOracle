@@ -1,14 +1,11 @@
 ---
+ID: ISS-003
 date: 2026-02-03
 status: solved  # 또는 pending
 category: JTAG
 priority: high  # high/medium/low
-urgency: high   # 아이젠하워용
-importance: high  # 아이젠하워용
 tags: [JTAG, CodeViser, TAP-controller, TCK, signal-timing]
-reviewed: []  # 복습 이력 [2026-02-04, 2026-02-07, ...]
-next_review: 2026-02-04  # 다음 복습 날짜
-review_count: 0
+flags: user-issue # or self-study
 ---
 
 ### 2026-02-03 | JTAG 초기화 시 TCK/TMS/TDI 신호 타이밍
@@ -30,8 +27,3 @@ SoC 설계팀에서 CodeViser가 JTAG 초기화 시 TCK를 먼저 보내고 이�
 1. CodeViser의 초기 JTAG 시퀀스 동작을 명확히 설명: TMS=1 유지 + TCK 5회 토글, TDI는 inactive (변화 없음).  
 2. SoC 설계팀에 해당 동작이 TAP 컨트롤러 요구사항(2클록 동안 신호 토글 없음)과 충돌하지 않음을 확인 요청.
 
-#### **왜 이렇게 했나**  
-JTAG 표준(TAP FSM)에 따라 초기 상태를 확실히 하기 위해 Test Logic Reset 진입은 필수적이며, 이는 대부분의 디버거에서 공통적으로 사용하는 방식임.
-
-#### **태그**  
-#JTAG #CodeViser #TAP-controller #TCK #signal-timing
