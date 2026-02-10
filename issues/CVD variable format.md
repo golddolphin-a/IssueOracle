@@ -1,7 +1,7 @@
 ---
 ID: ISS-001
 date: 2026-02-03
-status: solved  # 또는 pending
+status: solved  # or pending
 category: CVD function
 Architecture: all
 priority: medium  # high/medium/low
