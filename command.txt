@@ -1,0 +1,11 @@
+# 1. cvd-timeout.md 등록
+python review.py add cvd-timeout.md
+
+# 2. 상태 확인
+python review.py list
+
+# 3. 오늘 복습할 거 확인
+python review.py check
+
+# 4. 복습 완료 처리
+python review.py done cvd-timeout.md
