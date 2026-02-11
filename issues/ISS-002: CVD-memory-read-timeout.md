@@ -118,7 +118,7 @@ DEBUG.ResponseTimeOut <value_in_ms>
 
 **설정 방법:**
 ```
-OPTION.MemorySegmentSize S<size_in_bytes>
+DEBUG.MemorySegmentSize S<size_in_bytes>
 ```
 **실전 예시:**
 ```bash
@@ -189,9 +189,9 @@ Target clock 0.05 이하 & Memory read timeout 발생
 
 - CVD Script Reference Manual: 
   - `DEBUG.ResponseTimeOut` 명령어
-  - `OPTION.MemorySegmentSize` 명령어
+  - `DEBUG.MemorySegmentSize` 명령어
   - `data.dump` 명령어
-- JTAG-RISCV-002.md: JTAG clock 설정 관련
+
 
 ---
 
